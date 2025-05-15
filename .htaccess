@@ -1,8 +1,13 @@
 RewriteEngine On
+RewriteBase /8-insight/
 
-# If the requested file or directory does not exist
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# If file or directory exists, do not rewrite
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
 
-# Rewrite to .php
-RewriteRule ^(.*)$ $1.php [L,QSA]
+# Rewrite '/home' to 'home.php'
+RewriteRule ^home/?$ home.php [L]
+
+# Rewrite blog slugs to blog-details.php
+RewriteRule ^([^/]+)/?$ blog-details.php?slug=$1 [L,QSA]

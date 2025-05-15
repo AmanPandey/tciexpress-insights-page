@@ -1,5 +1,20 @@
 <!-- meta-single.php -->
 <!DOCTYPE html>
+
+<?php
+
+include 'db.php'; 
+
+$result = $conn->query("SELECT * FROM blogs ORDER BY id ASC LIMIT 12");
+$blogs = [];
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $blogs[] = $row;
+    }
+}
+?>
+
 <html lang="en">
 <head>
     <!-- Basic -->
@@ -37,43 +52,46 @@
             <div class="container-fluid">
                 <div class="masonry-blog clearfix">
                     <div class="left-side">
+                    <?php if (isset($blogs[0])): ?>
                         <div class="masonry-box post-media">
-                             <img src="https://tciexpress.in/images/express%20services/surface_express.jpg" alt="" class="img-fluid">
+                             <img src="http://localhost/8-insight/images/blogs/TCI%20Express%20AI%20Driven%20solution.jpg" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <!-- <span class="bg-aqua"><a href="blog-category-01.html" title="">Lifestyle</a></span> -->
-                                        <h4><a target="_blank" href="https://tciexpress.in/surface-express" title="">Surface Express</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[0]['slug']; ?>"><?php echo $blogs[0]['title']; ?></a></h4>
                                         <!-- <small><a target="_blank" href="single" title="">24 July, 2017</a></small>
                                         <small><a target="_blank" href="blog-author.html" title="">by Amanda</a></small> -->
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                             </div><!-- end shadow -->
                         </div><!-- end post-media -->
+                    <?php endif; ?>    
                     </div><!-- end left-side -->
 
                     <div class="center-side">
+                    <?php if (isset($blogs[1])): ?>
                         <div class="masonry-box post-media">
-                             <img src="https://tciexpress.in/images/express%20services/Air-Domestic-Express.png" alt="" class="img-fluid">
+                             <img src="http://localhost/8-insight/images/blogs/Automotive%20Logistics%20Services%20_%20Secure,%20Fast%20&%20Tech-Driven%20Solutions%20_%20TCI%20Express.jpg" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <!-- <span class="bg-green"><a target="_blank" href="blog-category-01.html" title="">Travel</a></span> -->
-                                        <h4><a target="_blank" href="https://tciexpress.in/domestic-air-express" title="">Domestic Air Express</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[1]['slug']; ?>"><?php echo $blogs[1]['title']; ?></a></h4>
                                         <!-- <small><a target="_blank" href="single" title="">24 July, 2017</a></small>
                                         <small><a target="_blank" href="blog-author.html" title="">by Amanda</a></small> -->
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                             </div><!-- end shadow -->
                         </div><!-- end post-media -->
-
+                    <?php endif; ?>       
                         <div class="masonry-box small-box post-media">
                              <img src="https://tciexpress.in/images/express%20services/Air-International-express.png" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <!-- <span class="bg-green"><a target="_blank" href="blog-category-01.html" title="">Travel</a></span> -->
-                                        <h4><a target="_blank" href="https://tciexpress.in/international-air-express" title="">International Air Express</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[3]['slug']; ?>"><?php echo $blogs[3]['title']; ?></a></h4>
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                             </div><!-- end shadow -->
@@ -85,7 +103,7 @@
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <!-- <span class="bg-green"><a target="_blank" href="blog-category-01.html" title="">Travel</a></span> -->
-                                        <h4><a target="_blank" href="https://tciexpress.in/rail-express" title="">Rail Express</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[4]['slug']; ?>"><?php echo $blogs[4]['title']; ?></a></h4>
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                             </div><!-- end shadow -->
@@ -93,19 +111,21 @@
                     </div><!-- end left-side -->
 
                     <div class="right-side hidden-md-down">
+                    <?php if (isset($blogs[2])): ?>
                         <div class="masonry-box post-media">
-                             <img src="https://tciexpress.in/images/Ecomm%20express.jpg" alt="" class="img-fluid">
+                             <img src="http://localhost/8-insight/images/blogs/TCI%20Express%20India%E2%80%99s%20Largest%20Logistics%20Company.jpg" alt="" class="img-fluid">
                              <div class="shadoweffect">
                                 <div class="shadow-desc">
                                     <div class="blog-meta">
                                         <!-- <span class="bg-aqua"><a target="_blank" href="blog-category-01.html" title="">Lifestyle</a></span> -->
-                                        <h4><a target="_blank" href="https://tciexpress.in/e-commerce" title="">E-Commerce</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[2]['slug']; ?>"><?php echo $blogs[2]['title']; ?></a></h4>
                                         <!-- <small><a target="_blank" href="single" title="">03 July, 2017</a></small>
                                         <small><a target="_blank" href="blog-author.html" title="">by Jessica</a></small> -->
                                     </div><!-- end meta -->
                                 </div><!-- end shadow-desc -->
                              </div><!-- end shadow -->
                         </div><!-- end post-media -->
+                    <?php endif; ?>       
                     </div><!-- end right-side -->
                 </div><!-- end masonry -->
             </div>
@@ -123,7 +143,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/c2c-express" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[5]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/express%20services/C2C-Express.png" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -131,8 +151,8 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta big-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/c2c-express" title="">C2C Express</a></h4>
-                                        <p>Full Truck load with Single and Milk run option with vehicle placement within 12 hours of the order confirmation.</p>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[5]['slug']; ?>"><?php echo $blogs[5]['title']; ?></a></h4>
+                                        <p><?php echo $blogs[5]['title']; ?></p>
                                         <!-- <small><a target="_blank" href="blog-category-01.html" title="">Lifestyle</a></small> -->
                                         <!-- <small><a target="_blank" href="single" title="">24 July, 2017</a></small> -->
                                         <!-- <small><a target="_blank" href="blog-author.html" title="">by Amanda</a></small> -->
@@ -143,7 +163,7 @@
 
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/cold-chain-express" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[6]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/express%20services/Cold-chain-express.png" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -151,8 +171,8 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta big-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/cold-chain-express" title="">Cold Chain Express</a></h4>
-                                        <p>Temperature Controlled transportation through FTL and Milk Run</p>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[6]['slug']; ?>"><?php echo $blogs[6]['title']; ?></a></h4>
+                                        <p><?php echo $blogs[6]['title']; ?></p>
                                         <!-- <small><a target="_blank" href="blog-category-01.html" title="">Lifestyle</a></small>
                                         <small><a target="_blank" href="single" title="">22 July, 2017</a></small>
                                         <small><a target="_blank" href="blog-author.html" title="">by Martines</a></small> -->
@@ -170,7 +190,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[7]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/2.png" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -178,7 +198,7 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/" title="">INVESTOR PRESENTATION</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[7]['slug']; ?>"><?php echo $blogs[7]['title']; ?></a></h4>
                                         <!-- <small><a target="_blank" href="blog-category-01.html" title="">Fashion</a></small>
                                         <small><a target="_blank" href="blog-category-01.html" title="">21 July, 2017</a></small> -->
                                     </div><!-- end meta -->
@@ -188,7 +208,7 @@
 
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[8]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/about1.jpg" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -196,7 +216,7 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/" title="">NEWS</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[8]['slug']; ?>"><?php echo $blogs[8]['title']; ?></a></h4>
                                         <!-- <small><a target="_blank" href="blog-category-01.html" title="">Fashion</a></small>
                                         <small><a target="_blank" href="blog-category-01.html" title="">11 July, 2017</a></small> -->
                                     </div><!-- end meta -->
@@ -206,7 +226,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[9]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/4.png" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -214,7 +234,7 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/" title="">ANNUAL REPORT</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[9]['slug']; ?>"><?php echo $blogs[9]['title']; ?></a></h4>
                                         <!-- <small><a href="blog-category-01.html" title="">Fashion</a>, <a href="blog-category-01.html" title="">Man</a></small>
                                         <small><a href="blog-category-01.html" title="">08 July, 2017</a></small> -->
                                     </div><!-- end meta -->
@@ -224,7 +244,7 @@
 
                                 <div class="blog-box">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[10]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/3.png" alt="" class="img-fluid">
                                             <div class="hovereffect">
                                                 <span></span>
@@ -232,7 +252,7 @@
                                         </a>
                                     </div><!-- end media -->
                                     <div class="blog-meta">
-                                        <h4><a target="_blank" href="https://tciexpress.in/" title="">JOBS</a></h4>
+                                        <h4><a target="_blank" href="/8-insight/<?php echo $blogs[10]['slug']; ?>"><?php echo $blogs[10]['title']; ?></a></h4>
                                         <!-- <small><a href="blog-category-01.html" title="">Fashion</a>, <a href="blog-category-01.html" title="">Style</a></small>
                                         <small><a href="blog-category-01.html" title="">04 July, 2017</a></small> -->
                                     </div><!-- end meta -->
