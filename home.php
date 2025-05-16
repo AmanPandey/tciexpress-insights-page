@@ -5,7 +5,7 @@
 
 include 'db.php'; 
 
-$result = $conn->query("SELECT * FROM blogs ORDER BY id ASC LIMIT 12");
+$result = $conn->query("SELECT * FROM blogs");
 $blogs = [];
 
 if ($result->num_rows > 0) {
@@ -286,7 +286,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/news.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[11]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/2.png" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -294,7 +294,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/news.aspx" title="">INVESTOR PRESENTATION</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[11]['slug']; ?>"><?php echo $blogs[11]['title']; ?></a></h4>
                                     <p>In case you are looking for complete company information along with details on finance and corporate governance. Please download our Investor Presentation.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Travel</a></small>
                                     <small><a href="single" title="">21 July, 2017</a></small>
@@ -307,7 +307,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/news.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[12]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/about1.jpg" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -315,7 +315,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/news.aspx" title="">NEWS</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[12]['slug']; ?>"><?php echo $blogs[12]['title']; ?></a></h4>
                                     <p>The most awaited report of the year is out now! Learn about future aspects, industry trends and impact on macro economic changes in India in our Annual Report FY 2016-17. Please download now for complete insight.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Travel</a></small>
                                     <small><a href="single" title="">20 July, 2017</a></small>
@@ -328,7 +328,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/news.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[13]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/4.png" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -336,7 +336,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/news.aspx" title="">ANNUAL REPORT</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[13]['slug']; ?>"><?php echo $blogs[13]['title']; ?></a></h4>
                                     <p>TCIEXPRESS has a strong media presence. It has been covered consistently by all major media houses, be it electronic, print or online.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Travel</a></small>
                                     <small><a href="single" title="">19 July, 2017</a></small>
@@ -355,7 +355,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/career.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[14]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/about/3.png" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -363,7 +363,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/career.aspx" title="">JOBS</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[14]['slug']; ?>"><?php echo $blogs[14]['title']; ?></a></h4>
                                     <p>TCI Express annual report is a comprehensive report on a company's activities throughout the preceding year. Annual reports will give our shareholders information about the company's activities and financial performance.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Food</a></small>
                                     <small><a href="single" title="">11 July, 2017</a></small>
@@ -376,7 +376,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/corporate-responsibilities.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[15]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/csr.jpg" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -384,7 +384,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/corporate-responsibilities.aspx" title="">CSR</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[15]['slug']; ?>"><?php echo $blogs[15]['title']; ?></a></h4>
                                     <p>We at TCI Express believe that CSR needs to go beyond communities and beyond the concept of philanthropy. Our main focus is to create higher standards of sustainability factoring social and environmental impacts for the greater good of people.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Food</a></small>
                                     <small><a href="single" title="">10 July, 2017</a></small>
@@ -397,7 +397,7 @@ if ($result->num_rows > 0) {
                             <div class="blog-box row">
                                 <div class="col-md-4">
                                     <div class="post-media">
-                                        <a target="_blank" href="https://tciexpress.in/index.aspx" title="">
+                                        <a target="_blank" href="/8-insight/<?php echo $blogs[16]['slug']; ?>"></a>
                                             <img src="https://tciexpress.in/images/reports.jpg" alt="" class="img-fluid">
                                             <div class="hovereffect"></div>
                                         </a>
@@ -405,7 +405,7 @@ if ($result->num_rows > 0) {
                                 </div><!-- end col -->
 
                                 <div class="blog-meta big-meta col-md-8">
-                                    <h4><a target="_blank" href="https://tciexpress.in/index.aspx" title="">ANNUAL REPORT</a></h4>
+                                    <h4><a target="_blank" href="/8-insight/<?php echo $blogs[16]['slug']; ?>"><?php echo $blogs[16]['title']; ?></a></h4>
                                     <p>TCI Express annual report is a comprehensive report on a company's activities throughout the preceding year. Annual reports will give our shareholders information about the company's activities and financial performance.</p>
                                     <!-- <small><a href="blog-category-01.html" title="">Food</a></small>
                                     <small><a href="single" title="">09 July, 2017</a></small>
@@ -422,7 +422,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/surface-express" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[17]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/surface_express.jpg" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span class="videohover"></span>
@@ -430,7 +430,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank" href="https://tciexpress.in/surface-express" title="">Surface Express</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[17]['slug']; ?>"><?php echo $blogs[17]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Videos</a></small>
                                 <small><a href="blog-category-01.html" title="">21 July, 2017</a></small> -->
                             </div><!-- end meta -->
@@ -440,7 +440,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/domestic-air-express" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[18]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/Air-Domestic-Express.png" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span class="videohover"></span>
@@ -448,7 +448,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank" href="https://tciexpress.in/domestic-air-express" title="">Domestic Air Express</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[18]['slug']; ?>"><?php echo $blogs[18]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Videos</a></small>
                                 <small><a href="blog-category-01.html" title="">20 July, 2017</a></small> -->
                             </div><!-- end meta -->
@@ -458,7 +458,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/international-air-express" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[19]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/Air-International-express.png" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span class="videohover"></span>
@@ -466,7 +466,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank" href="https://tciexpress.in/international-air-express" title="">International Air Express</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[19]['slug']; ?>"><?php echo $blogs[19]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Beauty</a></small>
                                 <small><a href="blog-category-01.html" title="">20 July, 2017</a></small> -->
                             </div><!-- end meta -->
@@ -480,7 +480,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/automobiles" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[20]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/web-images-auto.jpg" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span></span>
@@ -488,7 +488,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank" href="https://tciexpress.in/automobiles" title="">Automobiles</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[20]['slug']; ?>"><?php echo $blogs[20]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Spa</a></small>
                                 <small><a href="blog-category-01.html" title="">21 July, 2017</a></small> -->
                             </div><!-- end meta -->
@@ -498,7 +498,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/pharmaceuticals" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[21]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/web-images-pharma.jpg" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span></span>
@@ -506,7 +506,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank" href="https://tciexpress.in/pharmaceuticals" title="">Pharmaceuticals</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[21]['slug']; ?>"><?php echo $blogs[21]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Health</a></small>
                                 <small><a href="blog-category-01.html" title="">20 July, 2017</a></small> -->
                             </div><!-- end meta -->
@@ -516,7 +516,7 @@ if ($result->num_rows > 0) {
 
                         <div class="blog-box">
                             <div class="post-media">
-                                <a target="_blank" href="https://tciexpress.in/Retail" title="">
+                                <a target="_blank" href="/8-insight/<?php echo $blogs[22]['slug']; ?>"></a>
                                     <img src="https://tciexpress.in/images/express%20services/web-images-retail.jpg" alt="" class="img-fluid">
                                     <div class="hovereffect">
                                         <span></span>
@@ -524,7 +524,7 @@ if ($result->num_rows > 0) {
                                 </a>
                             </div><!-- end media -->
                             <div class="blog-meta">
-                                <h4><a target="_blank"  href="https://tciexpress.in/Retail" title="">Retail</a></h4>
+                                <h4><a target="_blank" href="/8-insight/<?php echo $blogs[22]['slug']; ?>"><?php echo $blogs[22]['title']; ?></a></h4>
                                 <!-- <small><a href="blog-category-01.html" title="">Beauty</a></small>
                                 <small><a href="blog-category-01.html" title="">20 July, 2017</a></small> -->
                             </div><!-- end meta -->
